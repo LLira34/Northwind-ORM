@@ -10,7 +10,9 @@ import java.util.List;
  * @version 1.0
  */
 public class Session {
+
     private static Session instance;//Instancia singleton
+
     private Session() {
     }
 

@@ -7,6 +7,6 @@ import models.Customer;
  *
  * @author LLira
  */
-public class CustomerDAOImplHibernate extends DAOImplHibernate<Customer, Integer> implements CustomerDAO{
-    
+public class CustomerDAOImplHibernate extends DAOImplHibernate<Customer, Integer> implements CustomerDAO {
+
 }//End class

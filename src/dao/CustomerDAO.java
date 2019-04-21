@@ -6,6 +6,6 @@ import models.Customer;
  *
  * @author LLira
  */
-public interface CustomerDAO extends DAO<Customer, Integer>{
-    
+public interface CustomerDAO extends DAO<Customer, Integer> {
+
 }//End class

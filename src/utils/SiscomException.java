@@ -30,10 +30,8 @@ public class SiscomException extends Exception {
         for (ConstraintViolation constraintViolation : cve.getConstraintViolations()) {
             String fieldName;
             String message;
-
             fieldName = getCaptions(constraintViolation.getRootBeanClass(), constraintViolation.getPropertyPath());
             message = constraintViolation.getMessage();
-
             siscomMessages.add(new SiscomMessage(fieldName, message));
         }
     }
