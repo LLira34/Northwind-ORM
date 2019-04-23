@@ -154,7 +154,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer{" + "customerID=" + customerID + ", companyName=" + companyName + ", contactName=" + contactName + ", contactTitle=" + contactTitle + ", address=" + address + ", city=" + city + ", region=" + region + ", postalCode=" + postalCode + ", country=" + country + ", phone=" + phone + ", fax=" + fax + '}';
+        return this.getCompanyName() + " " + this.getContactName();
     }
 
 }//End class

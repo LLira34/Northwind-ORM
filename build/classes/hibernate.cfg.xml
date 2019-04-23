@@ -19,6 +19,11 @@
         <property name="hibernate.c3p0.idle_test_period">3000</property>
         
         <mapping class="models.Customer"/>
+        <mapping class="models.Supplier"/>
         <mapping class="models.Category"/>
+        <mapping class="models.Product"/>
+        <mapping class="models.Employee"/>
+        <mapping class="models.Order"/>
+        <mapping class="models.OrderDetail"/>
     </session-factory>
 </hibernate-configuration>

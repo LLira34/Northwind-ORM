@@ -1,7 +1,5 @@
 package config;
 
-import java.util.List;
-
 /**
  * Clase que almacenará la información importante de un usuario en particular.
  * Ésta clase utilizar el patrón Singleton
