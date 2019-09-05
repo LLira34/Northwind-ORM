@@ -33,20 +33,17 @@ public class Employee {
     @Column(name = "HireDate", nullable = false)
     private String hiredate;
 
-    @Column(name = "City", nullable = false, length = 15)
-    private String city;
-
     public Employee() {
     }
 
-    public Employee(int employeeID, String lastname, String firstname, String title, String birthdate, String hiredate, String city) {
+    public Employee(int employeeID, String lastname, String firstname, String title,
+            String birthdate, String hiredate) {
         this.employeeID = employeeID;
         this.lastname = lastname;
         this.firstname = firstname;
         this.title = title;
         this.birthdate = birthdate;
         this.hiredate = hiredate;
-        this.city = city;
     }
 
     public int getEmployeeID() {
@@ -95,14 +92,6 @@ public class Employee {
 
     public void setHiredate(String hiredate) {
         this.hiredate = hiredate;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 
     @Override

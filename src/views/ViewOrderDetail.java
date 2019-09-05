@@ -1,5 +1,7 @@
 package views;
 
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.UIManager;
 
 /**
@@ -15,6 +17,11 @@ public class ViewOrderDetail extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
         this.setTitle("Gestión de Detalle de Orden");
+        this.setIconImage(new ImageIcon(getClass().getResource("/images/sale.png")).getImage());
+        JLabel imagen = new JLabel();
+        imagen.setIcon(new ImageIcon(getClass().getResource("/images/sale.png")));
+        imagen.setBounds(0, 0, 395, 370);
+        this.add(imagen);
     }
 
     public void clean() {

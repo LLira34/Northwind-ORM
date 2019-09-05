@@ -9,6 +9,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import models.Customer;
@@ -35,6 +37,12 @@ public class ViewOrder extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(this);
         this.setTitle("Gestión de Ordenes");
+        this.setIconImage(new ImageIcon(getClass().getResource("/images/sale.png")).getImage());
+        JLabel imagen = new JLabel();
+        imagen.setIcon(new ImageIcon(getClass().getResource("/images/sale.png")));
+        imagen.setBounds(0, 0, 395, 370);
+        this.add(imagen);
+        
         this.initTable();
         this.comboCustomer();
         this.comboEmployee();
@@ -46,7 +54,7 @@ public class ViewOrder extends javax.swing.JFrame {
             OrdersTableModel model = new OrdersTableModel();
             for (Order o1 : orders) {
                 model.inserData(new Object[]{o1.getOrderID(), o1.getCustomer(), o1.getEmployee(),
-                    o1.getOrderDate(), o1.getRequiredDate(), o1.getShippedDate(), o1.getShipVia()});
+                    o1.getOrderDate(), o1.getRequiredDate(), o1.getShippedDate()});
             }
             tblOrders.setModel(model);
         } catch (SiscomException ex) {
@@ -98,7 +106,6 @@ public class ViewOrder extends javax.swing.JFrame {
         dcsOrderDate.setCalendar(null);
         dcsRequiredDate.setCalendar(null);
         dcsShippedDate.setCalendar(null);
-        txtShipVia.setText("");
     }
 
     /**
@@ -117,8 +124,6 @@ public class ViewOrder extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        txtShipVia = new javax.swing.JTextField();
         dcsOrderDate = new com.toedter.calendar.JDateChooser();
         dcsRequiredDate = new com.toedter.calendar.JDateChooser();
         dcsShippedDate = new com.toedter.calendar.JDateChooser();
@@ -154,11 +159,6 @@ public class ViewOrder extends javax.swing.JFrame {
 
         jLabel6.setText("Fecha de envío:");
         jLabel6.setPreferredSize(new java.awt.Dimension(120, 30));
-
-        jLabel7.setText("Embarcar vía:");
-        jLabel7.setPreferredSize(new java.awt.Dimension(120, 30));
-
-        txtShipVia.setPreferredSize(new java.awt.Dimension(200, 30));
 
         dcsOrderDate.setDateFormatString("dd/MM/yyyy");
         dcsOrderDate.setPreferredSize(new java.awt.Dimension(200, 30));
@@ -230,11 +230,7 @@ public class ViewOrder extends javax.swing.JFrame {
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(dcsShippedDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtShipVia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(dcsShippedDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(39, Short.MAX_VALUE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
@@ -261,13 +257,9 @@ public class ViewOrder extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dcsShippedDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtShipVia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(66, 66, 66)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -457,13 +449,11 @@ public class ViewOrder extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblOrders;
-    private javax.swing.JTextField txtShipVia;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,8 +12,8 @@ public class EmployeesTableModel extends AbstractTableModel {
 
     private ImageIcon imgDelete = new ImageIcon(getClass().getResource("/images/delete.png"));
     private ImageIcon imgUpdate = new ImageIcon(getClass().getResource("/images/save.png"));
-    private String[] header = {"ID", "Apellidos", "Nombres", "Titulo",
-        "Fecha Nacimientos", "Contratación", "Ciudad", "Eliminar", "Editar"};
+    private String[] header = {"ID", "Nombres", "Apellido", "Titulo",
+        "Fecha Nacimientos", "Contratación", "Eliminar", "Editar"};
     private Vector data = new Vector();
 
     //dice el total de las columnas

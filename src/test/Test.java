@@ -18,14 +18,11 @@ public class Test {
             Customer customer = new Customer();
             customer.setCompanyName("Google");
             customer.setContactName("Perla Marmolejo");
-            customer.setContactTitle("Ventas");
+            
             customer.setAddress("Av. Universidad");
             customer.setCity("Queretaro");
-            customer.setRegion("Region Norte");
-            customer.setPostalCode("37800");
             customer.setCountry("Mexico");
             customer.setPhone("418-113-7817");
-            customer.setFax("1234-5678-9012");
             //dao.saveOrUpdate(customer);
             
             //Update

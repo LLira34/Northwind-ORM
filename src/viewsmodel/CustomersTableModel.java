@@ -12,8 +12,8 @@ public class CustomersTableModel extends AbstractTableModel {
 
     private ImageIcon imgDelete = new ImageIcon(getClass().getResource("/images/delete.png"));
     private ImageIcon imgUpdate = new ImageIcon(getClass().getResource("/images/save.png"));
-    private String[] header = {"ID", "Compañia", "Contacto", "Puesto", "Dirección", "Ciudad", "Región", "Codigo Postal", "País", 
-        "Telefono", "Fax", "Eliminar", "Editar"};
+    private String[] header = {"ID", "Compañia", "Contacto", "Dirección", "Ciudad", "País", 
+        "Telefono", "Eliminar", "Editar"};
     private Vector data = new Vector();
 
     //dice el total de las columnas

@@ -12,9 +12,8 @@ public class OrdersTableModel extends AbstractTableModel {
 
     private ImageIcon imgDelete = new ImageIcon(getClass().getResource("/images/delete.png"));
     private ImageIcon imgUpdate = new ImageIcon(getClass().getResource("/images/save.png"));
-    private String[] header = {"ID", "Cliente", "Empleado", 
-        "Fecha Orden", "Fecha Requerida", "Fecha Envío", "Embarcar", 
-        "Eliminar", "Editar"};
+    private String[] header = {"ID", "Cliente", "Empleado", "Fecha Orden",
+        "Fecha Requerida", "Fecha Envío", "Eliminar", "Editar"};
     private Vector data = new Vector();
 
     //dice el total de las columnas

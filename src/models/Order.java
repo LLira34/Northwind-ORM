@@ -29,9 +29,6 @@ public class Order {
     @Column(name = "ShippedDate", nullable = false)
     private String shippedDate;
 
-    @Column(name = "ShipVia", nullable = false)
-    private int shipVia;
-
     @ManyToOne
     @JoinColumn(name = "CustomerID")
     private Customer customer;
@@ -44,12 +41,11 @@ public class Order {
     }
 
     public Order(int orderID, String orderDate, String requiredDate,
-            String shippedDate, int shipVia, Customer customer, Employee employee) {
+            String shippedDate, Customer customer, Employee employee) {
         this.orderID = orderID;
         this.orderDate = orderDate;
         this.requiredDate = requiredDate;
         this.shippedDate = shippedDate;
-        this.shipVia = shipVia;
         this.customer = customer;
         this.employee = employee;
     }
@@ -84,14 +80,6 @@ public class Order {
 
     public void setShippedDate(String shippedDate) {
         this.shippedDate = shippedDate;
-    }
-
-    public int getShipVia() {
-        return shipVia;
-    }
-
-    public void setShipVia(int shipVia) {
-        this.shipVia = shipVia;
     }
 
     public Customer getCustomer() {

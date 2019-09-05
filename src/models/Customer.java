@@ -24,20 +24,11 @@ public class Customer {
     @Column(name = "ContactName", nullable = true, length = 60)
     private String contactName;
 
-    @Column(name = "ContactTitle", nullable = true, length = 60)
-    private String contactTitle;
-
     @Column(name = "Address", nullable = true, length = 120)
     private String address;
 
     @Column(name = "City", nullable = true, length = 30)
     private String city;
-
-    @Column(name = "Region", nullable = true, length = 30)
-    private String region;
-
-    @Column(name = "PostalCode", nullable = true, length = 20)
-    private String postalCode;
 
     @Column(name = "Country", nullable = true, length = 30)
     private String country;
@@ -45,23 +36,18 @@ public class Customer {
     @Column(name = "Phone", nullable = true, length = 48)
     private String phone;
 
-    @Column(name = "Fax", nullable = true, length = 48)
-    private String fax;
+    public Customer() {
+    }
 
-    public Customer() {}
-
-    public Customer(int customerID, String companyName, String contactName, String contactTitle, String address, String city, String region, String postalCode, String country, String phone, String fax) {
+    public Customer(int customerID, String companyName, String contactName,
+            String address, String city, String country, String phone) {
         this.customerID = customerID;
         this.companyName = companyName;
         this.contactName = contactName;
-        this.contactTitle = contactTitle;
         this.address = address;
         this.city = city;
-        this.region = region;
-        this.postalCode = postalCode;
         this.country = country;
         this.phone = phone;
-        this.fax = fax;
     }
 
     public int getCustomerID() {
@@ -88,14 +74,6 @@ public class Customer {
         this.contactName = contactName;
     }
 
-    public String getContactTitle() {
-        return contactTitle;
-    }
-
-    public void setContactTitle(String contactTitle) {
-        this.contactTitle = contactTitle;
-    }
-
     public String getAddress() {
         return address;
     }
@@ -112,22 +90,6 @@ public class Customer {
         this.city = city;
     }
 
-    public String getRegion() {
-        return region;
-    }
-
-    public void setRegion(String region) {
-        this.region = region;
-    }
-
-    public String getPostalCode() {
-        return postalCode;
-    }
-
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-    }
-
     public String getCountry() {
         return country;
     }
@@ -142,14 +104,6 @@ public class Customer {
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getFax() {
-        return fax;
-    }
-
-    public void setFax(String fax) {
-        this.fax = fax;
     }
 
     @Override

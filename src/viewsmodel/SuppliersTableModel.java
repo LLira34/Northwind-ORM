@@ -12,7 +12,7 @@ public class SuppliersTableModel extends AbstractTableModel {
 
     private ImageIcon imgDelete = new ImageIcon(getClass().getResource("/images/delete.png"));
     private ImageIcon imgUpdate = new ImageIcon(getClass().getResource("/images/save.png"));
-    private String[] header = {"ID", "Compañia", "Contacto", "Titulo", "Ciudad", "País","Eliminar", "Editar"};
+    private String[] header = {"ID", "Compañia", "Contacto", "Ciudad", "País", "Eliminar", "Editar"};
     private Vector data = new Vector();
 
     //dice el total de las columnas
